@@ -28,8 +28,8 @@ body{
     width: 100%;
     font-size: 32px;
 }
-.botão{
-    font-family: "Chakra Petch", sans-serif;
+.botao{
+    font-family: "Chakra Petch",sans-serif;
     background-color: var(--botao-inativo);
     color: var(--branco);
     display: flex;
@@ -38,4 +38,26 @@ body{
     font-size: 18px;
     align-items: center;
     width: 100%;
+    border-bottom: 4px solid var(--botao-ativo);
+    border-left: 2px solid var(--botao-ativo);
+    border-right: 2px solid var(--botao-ativo);
+    border-top: none;
+}
+.botoes{
+    display: block;
+}
+@media screen and (min-width: 768px){
+    .botoes{
+        display: flex;
+    }
+    .botao:first-child{
+        border-radius: 40px 0 0 0;
+    }
+    .botao:last-child{
+        border-radius: 0 40px 0 0;
+    }
+}
+.ativo{
+    background-color: var(--botao-ativo);
+    border-bottom: 4px solid var(--verde);
 }
